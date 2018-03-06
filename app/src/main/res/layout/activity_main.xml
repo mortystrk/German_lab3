@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bstu.by.glossary.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="22dp"
+        android:text="Слово:" />
+
+    <EditText
+        android:id="@+id/et_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/textView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_word"
+        android:layout_marginTop="31dp"
+        android:layout_toStartOf="@+id/et_word"
+        android:text="Перевод:" />
+
+    <EditText
+        android:id="@+id/et_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignStart="@+id/et_word"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_add_to_dictionary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_translation"
+        android:layout_alignStart="@+id/et_translation"
+        android:layout_below="@+id/et_translation"
+        android:layout_marginTop="21dp"
+        android:text="Добавить в словарь"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_translationInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_to_translate"
+        android:layout_alignStart="@+id/tv_translation"
+        android:text="Перевести на английский:" />
+
+    <EditText
+        android:id="@+id/et_to_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_translationInfo"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_to_translate"
+        android:layout_marginStart="19dp"
+        android:layout_toEndOf="@+id/et_to_translate"
+        android:text="Перевод"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_translation"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/btn_translate"
+        android:layout_marginTop="65dp" />
+
+    <Button
+        android:id="@+id/btn_good_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_translation"
+        android:layout_below="@+id/tv_translation"
+        android:layout_marginTop="38dp"
+        android:text="да"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_bad_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_good_translation"
+        android:layout_alignBottom="@+id/btn_good_translation"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/btn_good_translation"
+        android:text="нет"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/btn_changeTranslation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/btn_translate"
+        android:layout_toEndOf="@+id/btn_translate"
+        app:srcCompat="@android:drawable/ic_menu_rotate" />
+</RelativeLayout>
